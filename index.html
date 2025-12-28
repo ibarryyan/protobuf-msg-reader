@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Buffer 消息解析器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Protocol Buffer 消息解析器</h1>
+            <p class="subtitle">将 Protocol Buffer 文本格式转换为 JSON</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>输入 Protocol Buffer 消息</h2>
+                <textarea 
+                    id="pbInput" 
+                    placeholder="请输入 Protocol Buffer 消息格式，支持尖括号 <> 和花括号 {} 两种格式，例如：&#10;ls:<name:1 addr:<name:&quot;aaa&quot; code:CARD> >&#10;name:&quot;test&quot; user:{age:18 email:&quot;test@example.com&quot;}"
+                    rows="15"
+                ></textarea>
+                <div class="button-group">
+                    <button id="convertBtn" class="btn btn-primary">转换为 JSON</button>
+                    <button id="clearBtn" class="btn btn-secondary">清空</button>
+                    <button id="sampleBtn" class="btn btn-info">加载示例</button>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <h2>JSON 输出结果</h2>
+                <div id="jsonOutput" class="json-output">
+                    <p class="placeholder">转换结果将显示在这里...</p>
+                </div>
+                <div class="button-group">
+                    <button id="copyBtn" class="btn btn-success" style="display: none;">复制 JSON</button>
+                    <button id="formatBtn" class="btn btn-secondary" style="display: none;">格式化</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>支持嵌套结构、数组、字符串、数字等多种数据类型</p>
+        </footer>
+    </div>
+
+    <script src="parser.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

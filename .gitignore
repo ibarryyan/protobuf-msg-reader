@@ -1,0 +1,48 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Compiled binary
+protobuf-msg-reader
+
+# Dependency directories
+vendor/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Build output
+dist/
+build/
+
+# Node modules (if using npm for any frontend tooling)
+node_modules/
+
+# Temporary files
+tmp/
+temp/
